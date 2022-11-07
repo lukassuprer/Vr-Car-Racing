@@ -1,0 +1,47 @@
+{
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.1"
+    },
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results/seventhrun/CarDriver/CarDriver-0.onnx",
+                "reward": null,
+                "creation_time": 1663609877.947249,
+                "auxillary_file_paths": [
+                    "results/seventhrun/CarDriver/CarDriver-0.pt"
+                ]
+            },
+            {
+                "steps": 15296,
+                "file_path": "results/seventhrun/CarDriver/CarDriver-15296.onnx",
+                "reward": -15.050000429153442,
+                "creation_time": 1663609974.78565,
+                "auxillary_file_paths": [
+                    "results/seventhrun/CarDriver/CarDriver-15296.pt"
+                ]
+            },
+            {
+                "steps": 56406,
+                "file_path": "results/seventhrun/CarDriver/CarDriver-56406.onnx",
+                "reward": null,
+                "creation_time": 1663610332.2673101,
+                "auxillary_file_paths": [
+                    "results/seventhrun/CarDriver/CarDriver-56406.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 56406,
+            "file_path": "results/seventhrun/CarDriver.onnx",
+            "reward": null,
+            "creation_time": 1663610332.2673101,
+            "auxillary_file_paths": [
+                "results/seventhrun/CarDriver/CarDriver-56406.pt"
+            ]
+        }
+    }
+}

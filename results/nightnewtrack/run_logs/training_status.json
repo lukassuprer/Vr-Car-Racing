@@ -1,0 +1,65 @@
+{
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 37999979,
+                "file_path": "results/nightnewtrack/CarDriver/CarDriver-37999979.onnx",
+                "reward": 2.3333333333333335,
+                "creation_time": 1664343303.510059,
+                "auxillary_file_paths": [
+                    "results/nightnewtrack/CarDriver/CarDriver-37999979.pt"
+                ]
+            },
+            {
+                "steps": 38499938,
+                "file_path": "results/nightnewtrack/CarDriver/CarDriver-38499938.onnx",
+                "reward": 9.833333333333334,
+                "creation_time": 1664344272.7178628,
+                "auxillary_file_paths": [
+                    "results/nightnewtrack/CarDriver/CarDriver-38499938.pt"
+                ]
+            },
+            {
+                "steps": 38999959,
+                "file_path": "results/nightnewtrack/CarDriver/CarDriver-38999959.onnx",
+                "reward": 28.818181818181817,
+                "creation_time": 1664345247.412012,
+                "auxillary_file_paths": [
+                    "results/nightnewtrack/CarDriver/CarDriver-38999959.pt"
+                ]
+            },
+            {
+                "steps": 39499977,
+                "file_path": "results/nightnewtrack/CarDriver/CarDriver-39499977.onnx",
+                "reward": 12.25,
+                "creation_time": 1664346222.22359,
+                "auxillary_file_paths": [
+                    "results/nightnewtrack/CarDriver/CarDriver-39499977.pt"
+                ]
+            },
+            {
+                "steps": 39931872,
+                "file_path": "results/nightnewtrack/CarDriver/CarDriver-39931872.onnx",
+                "reward": -24.0,
+                "creation_time": 1664347062.181681,
+                "auxillary_file_paths": [
+                    "results/nightnewtrack/CarDriver/CarDriver-39931872.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 39931872,
+            "file_path": "results/nightnewtrack/CarDriver.onnx",
+            "reward": -24.0,
+            "creation_time": 1664347062.181681,
+            "auxillary_file_paths": [
+                "results/nightnewtrack/CarDriver/CarDriver-39931872.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.1"
+    }
+}

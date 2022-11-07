@@ -1,0 +1,65 @@
+{
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results/nightrun/CarDriver/CarDriver-0.onnx",
+                "reward": null,
+                "creation_time": 1663747083.508835,
+                "auxillary_file_paths": [
+                    "results/nightrun/CarDriver/CarDriver-0.pt"
+                ]
+            },
+            {
+                "steps": 3328,
+                "file_path": "results/nightrun/CarDriver/CarDriver-3328.onnx",
+                "reward": null,
+                "creation_time": 1663747122.0750122,
+                "auxillary_file_paths": [
+                    "results/nightrun/CarDriver/CarDriver-3328.pt"
+                ]
+            },
+            {
+                "steps": 94676,
+                "file_path": "results/nightrun/CarDriver/CarDriver-94676.onnx",
+                "reward": -0.3333333333333333,
+                "creation_time": 1663747574.084525,
+                "auxillary_file_paths": [
+                    "results/nightrun/CarDriver/CarDriver-94676.pt"
+                ]
+            },
+            {
+                "steps": 99919,
+                "file_path": "results/nightrun/CarDriver/CarDriver-99919.onnx",
+                "reward": -0.6,
+                "creation_time": 1663747662.090053,
+                "auxillary_file_paths": [
+                    "results/nightrun/CarDriver/CarDriver-99919.pt"
+                ]
+            },
+            {
+                "steps": 135379,
+                "file_path": "results/nightrun/CarDriver/CarDriver-135379.onnx",
+                "reward": -0.6666666666666666,
+                "creation_time": 1663747768.844498,
+                "auxillary_file_paths": [
+                    "results/nightrun/CarDriver/CarDriver-135379.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 135379,
+            "file_path": "results/nightrun/CarDriver.onnx",
+            "reward": -0.6666666666666666,
+            "creation_time": 1663747768.844498,
+            "auxillary_file_paths": [
+                "results/nightrun/CarDriver/CarDriver-135379.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.1"
+    }
+}

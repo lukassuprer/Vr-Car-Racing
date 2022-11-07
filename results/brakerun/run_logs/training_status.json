@@ -1,0 +1,65 @@
+{
+    "CarDriver": {
+        "checkpoints": [
+            {
+                "steps": 43499985,
+                "file_path": "results/brakerun/CarDriver/CarDriver-43499985.onnx",
+                "reward": 95.25,
+                "creation_time": 1663998662.072897,
+                "auxillary_file_paths": [
+                    "results/brakerun/CarDriver/CarDriver-43499985.pt"
+                ]
+            },
+            {
+                "steps": 43999998,
+                "file_path": "results/brakerun/CarDriver/CarDriver-43999998.onnx",
+                "reward": -111.0,
+                "creation_time": 1663999676.740056,
+                "auxillary_file_paths": [
+                    "results/brakerun/CarDriver/CarDriver-43999998.pt"
+                ]
+            },
+            {
+                "steps": 44029070,
+                "file_path": "results/brakerun/CarDriver/CarDriver-44029070.onnx",
+                "reward": null,
+                "creation_time": 1663999737.330152,
+                "auxillary_file_paths": [
+                    "results/brakerun/CarDriver/CarDriver-44029070.pt"
+                ]
+            },
+            {
+                "steps": 44215306,
+                "file_path": "results/brakerun/CarDriver/CarDriver-44215306.onnx",
+                "reward": 156.0,
+                "creation_time": 1664177974.190023,
+                "auxillary_file_paths": [
+                    "results/brakerun/CarDriver/CarDriver-44215306.pt"
+                ]
+            },
+            {
+                "steps": 44285674,
+                "file_path": "results/brakerun/CarDriver/CarDriver-44285674.onnx",
+                "reward": 122.75,
+                "creation_time": 1664182827.821151,
+                "auxillary_file_paths": [
+                    "results/brakerun/CarDriver/CarDriver-44285674.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 44285674,
+            "file_path": "results/brakerun/CarDriver.onnx",
+            "reward": 122.75,
+            "creation_time": 1664182827.821151,
+            "auxillary_file_paths": [
+                "results/brakerun/CarDriver/CarDriver-44285674.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.1"
+    }
+}
