@@ -24,8 +24,6 @@ public class HandPresence : MonoBehaviour
     private Vector2 axis2 = Vector2.zero;
     public CarController carController;
 
-    public bool triggerPress;
-
     private void Start()
     {
         TryInitialize();
@@ -84,13 +82,13 @@ public class HandPresence : MonoBehaviour
 
     private void MoveCar()
     {
-        if (targetDevice.name == "Oculus Touch Controller - Left")
+        if((targetDevice.characteristics & InputDeviceCharacteristics.Left) != 0)
         {
             if (targetDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out axis))
             {
             }
         }
-        else if (targetDevice.name == "Oculus Touch Controller - Right")
+        else if ((targetDevice.characteristics & InputDeviceCharacteristics.Right) != 0)
         {
             if (targetDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out axis2))
             {

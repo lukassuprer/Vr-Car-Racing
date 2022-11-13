@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using System.Reflection;
 
 public class SteeringWheelController : MonoBehaviour
 {

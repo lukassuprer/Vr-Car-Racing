@@ -163,7 +163,6 @@ Library: lib_burst_generated
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.VisualScripting.Core.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.Barracuda.ONNX.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/UnityEngine.XR.LegacyInputHelpers.dll
---root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.XR.Oculus.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.Burst.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.TextMeshPro.dll
@@ -172,6 +171,7 @@ Library: lib_burst_generated
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.XR.CoreUtils.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Siccity.GLTFUtility.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.ML-Agents.CommunicatorObjects.dll
+--root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.XR.OpenXR.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.ML-Agents.Extensions.Input.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.ML-Agents.Extensions.dll
@@ -492,7 +492,6 @@ Library: lib_burst_generated
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.VisualScripting.Core.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.Barracuda.ONNX.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/UnityEngine.XR.LegacyInputHelpers.dll
---root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.XR.Oculus.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.Burst.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.TextMeshPro.dll
@@ -501,6 +500,7 @@ Library: lib_burst_generated
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.XR.CoreUtils.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Siccity.GLTFUtility.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.ML-Agents.CommunicatorObjects.dll
+--root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.XR.OpenXR.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.ML-Agents.Extensions.Input.dll
 --root-assembly=/Users/lukasprochazka/Documents/GitHub/Vr-Car-Racing/Temp/StagingArea/Data/Managed/Unity.ML-Agents.Extensions.dll
