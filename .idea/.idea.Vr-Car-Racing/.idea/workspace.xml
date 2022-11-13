@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5701dd9b-d147-4dc1-8e52-4d5e9c971ef3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/lib/libtorch_cpu.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Vr-Car-Racing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Vr-Car-Racing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus Hands/Prefabs/Left Hand Model.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus Hands/Prefabs/Left Hand Model.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus Hands/Prefabs/Right Hand Model.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus Hands/Prefabs/Right Hand Model.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HandPresence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HandPresence.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SteeringWheelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SteeringWheelController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +30,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_Private.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BrakeScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -90,6 +98,9 @@
       <workItem from="1667312672839" duration="12289000" />
       <workItem from="1667638273479" duration="8085000" />
       <workItem from="1667724772767" duration="6830000" />
+      <workItem from="1667834005309" duration="28000" />
+      <workItem from="1668073387419" duration="2497000" />
+      <workItem from="1668243370292" duration="16119000" />
     </task>
     <servers />
   </component>

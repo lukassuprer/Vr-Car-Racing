@@ -20,7 +20,7 @@ public class SteeringWheelController : MonoBehaviour
     public Transform[] snapPositions;
 
     public float currentSteeringWheelRotation = 0;
-    private float turnDampening = 250;
+    //private float turnDampening = 250;
 
     public Transform directionalObject;
 
@@ -53,8 +53,8 @@ public class SteeringWheelController : MonoBehaviour
             FindHands();
         }
 
-        RealeaseHandFromWheel();
-        ConvertHandRotationToSteeringWheelRotation();
+        //RealeaseHandFromWheel();
+        //ConvertHandRotationToSteeringWheelRotation();
         //TurnVehicle();
         //currentSteeringWheelRotation = -transform.rotation.eulerAngles.z;
         transform.localRotation = Quaternion.Euler(currentSteeringWheelRotation, 90, -90);

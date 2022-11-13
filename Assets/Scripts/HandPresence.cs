@@ -6,6 +6,7 @@ using Unity.MLAgents.Integrations.Match3;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class HandPresence : MonoBehaviour
 {
@@ -60,7 +61,7 @@ public class HandPresence : MonoBehaviour
         {
             Debug.Log(item.name);
         }
-
+        
         if (devices.Count > 0)
         {
             targetDevice = devices[0];
@@ -74,8 +75,9 @@ public class HandPresence : MonoBehaviour
                 Debug.Log("Did not find corresponding controller model");
                 spawnedController = Instantiate(controllerPrefabs[0], transform.parent);
             }
-
+            
             spawnedHandModel = Instantiate(handModelPrefab, transform.parent);
+            spawnedHandModel.GetComponent<XRDirectInteractor>().TryGetComponent<XRInteractionManager>(out XRInteractionManager manager);
             handAnimator = spawnedHandModel.GetComponent<Animator>();
         }
     }
@@ -97,14 +99,12 @@ public class HandPresence : MonoBehaviour
 
         if (axis2 != Vector2.zero || axis != Vector2.zero)
         {
-            Debug.Log(axis);
             carController.SetInputs(axis.y, axis2.x);
         }
     }
 
     private void Update()
     {
-
         if (carController == null)
         {
             carController = FindObjectOfType<CarController>();
@@ -113,15 +113,6 @@ public class HandPresence : MonoBehaviour
         if (!targetDevice.isValid)
         {
             TryInitialize();
-        }
-        MoveCar();
-        if (targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool primaryButtonValue))
-        {
-            if (primaryButtonValue)
-            {
-                Debug.Log("hello");
-                carController.Brake();
-            }
         }
         else
         {
@@ -136,6 +127,16 @@ public class HandPresence : MonoBehaviour
                 spawnedController.SetActive(false);
                 UpdateHandAnimation();
             }
+        }
+        MoveCar();
+        if (targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool primaryButtonValue))
+        {
+            //if (!primaryButtonValue) return;
+            if (primaryButtonValue)
+            {
+                carController.SetInputs(0, axis2.x);
+            }
+            carController.Brake(primaryButtonValue);
         }
     }
 }
