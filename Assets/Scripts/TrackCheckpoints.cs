@@ -41,15 +41,15 @@ public class TrackCheckpoints : MonoBehaviour
             //Correct checkpoint
             nextCheckPointIndexList[carTransformList.IndexOf(carTransform)] = (nextCheckPointIndex + 1) % checkpointSingleList.Count;
             OnCarCorrectCheckpoint?.Invoke(this, EventArgs.Empty);
-            carTransform.TryGetComponent<CarDriverAgent>(out CarDriverAgent carDriverAgent);
-            carDriverAgent.CorrectCheckpoint();
+            //carTransform.TryGetComponent<CarDriverAgent>(out CarDriverAgent carDriverAgent);
+            //carDriverAgent.CorrectCheckpoint();
         }
         else
         {
             //Wrong checkpoint
             OnCarWrongCheckpoint?.Invoke(this, EventArgs.Empty);
-            carTransform.TryGetComponent<CarDriverAgent>(out CarDriverAgent carDriverAgent);
-            carDriverAgent.WrongCheckpoint();
+            //carTransform.TryGetComponent<CarDriverAgent>(out CarDriverAgent carDriverAgent);
+            //carDriverAgent.WrongCheckpoint();
         }
     }
 

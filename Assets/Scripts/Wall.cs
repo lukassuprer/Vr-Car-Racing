@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other)
+    /*private void OnCollisionEnter(Collision other)
     {
         if (other.transform.TryGetComponent<CarDriverAgent>(out CarDriverAgent car))
         {
@@ -16,5 +16,5 @@ public class Wall : MonoBehaviour
         {
             car.WallCollisionEnter();
         }
-    }
+    }*/
 }
