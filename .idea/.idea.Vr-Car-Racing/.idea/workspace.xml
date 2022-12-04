@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5701dd9b-d147-4dc1-8e52-4d5e9c971ef3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Vr-Car-Racing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Vr-Car-Racing/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/DebugXR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/DebugXR.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/Icons/hwinfo-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/Icons/hwinfo-icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/Icons/sign-warning-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/Icons/sign-warning-icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/Icons/system-error-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/Icons/system-error-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/Scripts/DebugLogPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/Scripts/DebugLogPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/Sounds/Computer Error-SoundBible.com-69768060.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DebugXR, by Tobiesen/Sounds/Computer Error-SoundBible.com-69768060.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Oculus Hands/Animations/l_hand_default_anim.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus Hands/Animations/l_hand_default_anim.fbx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Oculus Hands/Animations/l_hand_fist_anim.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus Hands/Animations/l_hand_fist_anim.fbx" afterDir="false" />
@@ -20,14 +18,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/Oculus Hands/Animations/r_hand_pinch_anim.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus Hands/Animations/r_hand_pinch_anim.fbx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Oculus Hands/Models/l_hand_skeletal_lowres.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus Hands/Models/l_hand_skeletal_lowres.fbx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Oculus Hands/Models/r_hand_skeletal_lowres.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus Hands/Models/r_hand_skeletal_lowres.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Continuous Move.preset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Continuous Move.preset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Continuous Turn.preset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Continuous Turn.preset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Input Actions.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Input Actions.inputactions.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Left Controller.preset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Left Controller.preset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Right Controller.preset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Right Controller.preset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Snap Turn.preset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default Snap Turn.preset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default XR UI Input Module.preset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.1.1/Starter Assets/XRI Default XR UI Input Module.preset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/VR Controllers Models/Default Controllers/Default Controller.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VR Controllers Models/Default Controllers/Default Controller.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/VR Controllers Models/Oculus Controllers/oculus_cv1_controller_left/external_controller01.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VR Controllers Models/Oculus Controllers/oculus_cv1_controller_left/external_controller01.psd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/VR Controllers Models/Oculus Controllers/oculus_cv1_controller_left/external_controller01_col.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VR Controllers Models/Oculus Controllers/oculus_cv1_controller_left/external_controller01_col.png" afterDir="false" />
@@ -58,7 +48,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/VR Controllers Models/Vive Controllers/Textures/onepointfive_occ_bake.tga" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VR Controllers Models/Vive Controllers/Textures/onepointfive_occ_bake.tga" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/VR Controllers Models/Vive Controllers/Textures/onepointfive_spec.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VR Controllers Models/Vive Controllers/Textures/onepointfive_spec.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/VR Controllers Models/Vive Controllers/Textures/onepointfive_texture.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VR Controllers Models/Vive Controllers/Textures/onepointfive_texture.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build0.1_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/build0.1_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build0.1_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Google.Protobuf.dll" beforeDir="false" afterPath="$PROJECT_DIR$/build0.1_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Google.Protobuf.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build0.1_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Mono.Security.dll" beforeDir="false" afterPath="$PROJECT_DIR$/build0.1_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Mono.Security.dll" afterDir="false" />
@@ -209,6 +198,7 @@
       <workItem from="1668243370292" duration="16119000" />
       <workItem from="1668330866560" duration="1536000" />
       <workItem from="1668424881221" duration="349000" />
+      <workItem from="1669283060156" duration="652000" />
     </task>
     <servers />
   </component>
