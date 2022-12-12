@@ -14,23 +14,27 @@
 
 // 0x00000001 System.Byte[] UnityEngine.ImageConversion::EncodeToPNG(UnityEngine.Texture2D)
 extern void ImageConversion_EncodeToPNG_m0FFFD0F0DC0EC22073BC937A5294067C57008391 (void);
-// 0x00000002 System.Boolean UnityEngine.ImageConversion::LoadImage(UnityEngine.Texture2D,System.Byte[],System.Boolean)
-extern void ImageConversion_LoadImage_mE2D612F3895FDD7A87805E1C9D77A79C019213E2 (void);
-static Il2CppMethodPointer s_methodPointers[2] = 
+// 0x00000002 System.Byte[] UnityEngine.ImageConversion::EncodeToJPG(UnityEngine.Texture2D,System.Int32)
+extern void ImageConversion_EncodeToJPG_mABBC4FA7AF9A69EB41FDE1CFE73A3F8656546385 (void);
+// 0x00000003 System.Byte[] UnityEngine.ImageConversion::EncodeToJPG(UnityEngine.Texture2D)
+extern void ImageConversion_EncodeToJPG_mC836EE718BC6C3EA5F7A3427458E188026658DC0 (void);
+static Il2CppMethodPointer s_methodPointers[3] = 
 {
 	ImageConversion_EncodeToPNG_m0FFFD0F0DC0EC22073BC937A5294067C57008391,
-	ImageConversion_LoadImage_mE2D612F3895FDD7A87805E1C9D77A79C019213E2,
+	ImageConversion_EncodeToJPG_mABBC4FA7AF9A69EB41FDE1CFE73A3F8656546385,
+	ImageConversion_EncodeToJPG_mC836EE718BC6C3EA5F7A3427458E188026658DC0,
 };
-static const int32_t s_InvokerIndices[2] = 
+static const int32_t s_InvokerIndices[3] = 
 {
-	10815,
-	8779,
+	9472,
+	8707,
+	9472,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_ImageConversionModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_ImageConversionModule_CodeGenModule = 
 {
 	"UnityEngine.ImageConversionModule.dll",
-	2,
+	3,
 	s_methodPointers,
 	0,
 	NULL,
