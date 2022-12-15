@@ -38,13 +38,11 @@ public class ButtonVR : MonoBehaviour
             onRelease.Invoke();
             isPressed = false;
         }
-    }
+    } 
     
-    public void SpawnSphere()
+    public void ButtonsPress(GameObject car)
     {
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        sphere.transform.localPosition = new Vector3(0, 1, 2);
-        sphere.AddComponent<Rigidbody>();
+        GameManager.instance.player.transform.position = new Vector3(0,0,0);
+        GameManager.instance.currentCar = car;
     }
 }
