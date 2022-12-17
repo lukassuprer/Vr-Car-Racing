@@ -12,6 +12,8 @@ TagManager:
   - LeftHand
   - car
   - CarSpawnPoint
+  - xrManager
+  - PlayerPos
   layers:
   - Default
   - TransparentFX

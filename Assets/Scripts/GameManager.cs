@@ -19,4 +19,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+    public void SpawnCar()
+    {
+        Instantiate(currentCar, player.transform.position, player.transform.rotation);
+    }
 }

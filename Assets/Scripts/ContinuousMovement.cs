@@ -15,6 +15,7 @@ public class ContinuousMovement : MonoBehaviour
     
     
     private Vector2 inputAxis;
+    private float inputFloat;
     private CharacterController character;
     private XROrigin rig;
     private float fallingSpeed;
@@ -29,13 +30,14 @@ public class ContinuousMovement : MonoBehaviour
     {
         InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
+        device.TryGetFeatureValue(CommonUsages.trigger, out inputFloat);
     }
 
     private void FixedUpdate()
     {
         CapsuleFollow();
         Quaternion headYaw = Quaternion.Euler(0, rig.Camera.transform.eulerAngles.y, 0);
-        Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
+        Vector3 direction = headYaw * new Vector3(0, 0, inputFloat);
         character.Move(direction * (Time.fixedDeltaTime * speed));
 
         if(checkIfGrounded())

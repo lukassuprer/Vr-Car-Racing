@@ -11,6 +11,7 @@ public class ButtonVR : MonoBehaviour
     private GameObject presser;
     private AudioSource audioSource;
     private bool isPressed;
+    private HandPresence handPresence;
     
     private void Start()
     {
@@ -35,14 +36,17 @@ public class ButtonVR : MonoBehaviour
         if (other.gameObject == presser)
         {
             button.transform.localPosition = new Vector3(0, 0.015f, 0);
-            onRelease.Invoke();
             isPressed = false;
+            onRelease.Invoke();
         }
     } 
     
-    public void ButtonsPress(GameObject car)
+    public void ButtonPress(GameObject car)
     {
-        GameManager.instance.player.transform.position = new Vector3(0,0,0);
-        GameManager.instance.currentCar = car;
+        car.SetActive(true);
+        handPresence = GameObject.FindGameObjectWithTag("LeftHand").GetComponent<HandPresence>();
+        handPresence.getCarController(car.GetComponent<CarController>());
+        handPresence = GameObject.FindGameObjectWithTag("RightHand").GetComponent<HandPresence>();
+        handPresence.getCarController(car.GetComponent<CarController>());
     }
 }

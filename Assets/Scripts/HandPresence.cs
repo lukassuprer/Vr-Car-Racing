@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
@@ -70,7 +71,6 @@ public class HandPresence : MonoBehaviour
             }
             
             spawnedHandModel = Instantiate(handModelPrefab, transform.parent);
-            spawnedHandModel.GetComponent<XRDirectInteractor>().TryGetComponent<XRInteractionManager>(out XRInteractionManager manager);
             handAnimator = spawnedHandModel.GetComponent<Animator>();
         }
     }
@@ -95,14 +95,19 @@ public class HandPresence : MonoBehaviour
             carController.SetInputs(axis.y, axis2.x);
         }
     }
+    
+    public void getCarController(CarController carController)
+    {
+        this.carController = carController;
+    }
 
     private void Update()
     {
-        if (carController == null)
+        if(carController == null)
         {
             carController = FindObjectOfType<CarController>();
         }
-
+        Debug.Log(carController);
         if (!targetDevice.isValid)
         {
             TryInitialize();
