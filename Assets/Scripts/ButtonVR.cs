@@ -12,11 +12,13 @@ public class ButtonVR : MonoBehaviour
     private AudioSource audioSource;
     private bool isPressed;
     private HandPresence handPresence;
+    private GameManager gameManager;
     
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         isPressed = false;
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
     
     private void OnTriggerEnter(Collider other)
@@ -41,12 +43,26 @@ public class ButtonVR : MonoBehaviour
         }
     } 
     
-    public void ButtonPress(GameObject car)
+    public void ButtonPress(GameObject objectToActivate)
     {
-        car.SetActive(true);
-        handPresence = GameObject.FindGameObjectWithTag("LeftHand").GetComponent<HandPresence>();
-        handPresence.getCarController(car.GetComponent<CarController>());
-        handPresence = GameObject.FindGameObjectWithTag("RightHand").GetComponent<HandPresence>();
-        handPresence.getCarController(car.GetComponent<CarController>());
+        if(objectToActivate.tag == "car")
+        {
+            Debug.Log(objectToActivate);
+            objectToActivate.SetActive(true);
+            handPresence = GameObject.FindGameObjectWithTag("LeftHand").GetComponent<HandPresence>();
+            handPresence.getCarController(objectToActivate.GetComponent<CarController>());
+            handPresence = GameObject.FindGameObjectWithTag("RightHand").GetComponent<HandPresence>();
+            handPresence.getCarController(objectToActivate.GetComponent<CarController>());
+        }
+        else
+        {
+            Debug.Log("map");
+            foreach (var map in gameManager.maps)
+            {
+                map.SetActive(false);
+            }
+
+            objectToActivate.SetActive(true);
+        }
     }
 }

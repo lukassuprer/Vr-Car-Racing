@@ -1132,6 +1132,8 @@ struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95;
 struct GameBoard_t60116B13F343499C4471611881814A5299C696D8;
 // Oculus.Platform.Samples.VrBoardGame.GameController
 struct GameController_tD5904736CDF8FE24810C9703CACB7749B207377F;
+// GameManager
+struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6;
 // UnityEngine.GameObject
 struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
 // Oculus.Platform.Samples.VrBoardGame.GamePiece
@@ -28186,6 +28188,8 @@ struct ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE  : public MonoBehaviou
 	bool ___isPressed_9;
 	// HandPresence ButtonVR::handPresence
 	HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E* ___handPresence_10;
+	// GameManager ButtonVR::gameManager
+	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___gameManager_11;
 };
 
 // Oculus.Platform.CallbackRunner
@@ -28213,10 +28217,8 @@ struct CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5  : public MonoBeh
 	float ___breakPower_7;
 	// UnityEngine.Rigidbody CarController::rb
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___rb_8;
-	// TMPro.TextMeshProUGUI CarController::speedometer
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___speedometer_9;
 	// SteeringWheelController CarController::steeringWheelController
-	SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888* ___steeringWheelController_10;
+	SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888* ___steeringWheelController_9;
 };
 
 // Oculus.Interaction.Samples.CarouselView
@@ -28793,6 +28795,8 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___player_5;
 	// UnityEngine.GameObject GameManager::currentCar
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___currentCar_6;
+	// UnityEngine.GameObject[] GameManager::maps
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___maps_7;
 };
 
 struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields
@@ -31315,6 +31319,8 @@ struct TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9  : public Mono
 	List_1_tE21C50E4AE1E814CAF0C89E3274C165A867F4317* ___checkpointSingleList_7;
 	// System.Collections.Generic.List`1<System.Int32> TrackCheckpoints::nextCheckPointIndexList
 	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___nextCheckPointIndexList_8;
+	// TMPro.TextMeshProUGUI TrackCheckpoints::text
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___text_9;
 };
 
 // OculusSampleFramework.TrackSegment
@@ -36821,33 +36827,33 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6932[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6933[3] = 
 {
 	static_cast<int32_t>(offsetof(BrakeScript_tEFD0646361E056B5923FE8A14C02F695B9F0DE46, ___carController_4)),static_cast<int32_t>(offsetof(BrakeScript_tEFD0646361E056B5923FE8A14C02F695B9F0DE46, ___hinge_5)),static_cast<int32_t>(offsetof(BrakeScript_tEFD0646361E056B5923FE8A14C02F695B9F0DE46, ___carPostion_6)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6934[7] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6934[8] = 
 {
-	static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___button_4)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___onPress_5)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___onRelease_6)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___presser_7)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___audioSource_8)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___isPressed_9)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___handPresence_10)),};
+	static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___button_4)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___onPress_5)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___onRelease_6)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___presser_7)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___audioSource_8)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___isPressed_9)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___handPresence_10)),static_cast<int32_t>(offsetof(ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE, ___gameManager_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6935[4] = 
 {
 	static_cast<int32_t>(offsetof(AxleInfo_tEC75498AEBD5C8A2E983F25BAC16954502E371F9, ___leftWheel_0)),static_cast<int32_t>(offsetof(AxleInfo_tEC75498AEBD5C8A2E983F25BAC16954502E371F9, ___rightWheel_1)),static_cast<int32_t>(offsetof(AxleInfo_tEC75498AEBD5C8A2E983F25BAC16954502E371F9, ___motor_2)),static_cast<int32_t>(offsetof(AxleInfo_tEC75498AEBD5C8A2E983F25BAC16954502E371F9, ___steering_3)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6936[7] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6936[6] = 
 {
-	static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___axleInfos_4)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___maxMotorTorque_5)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___maxSteeringAngle_6)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___breakPower_7)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___rb_8)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___speedometer_9)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___steeringWheelController_10)),};
+	static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___axleInfos_4)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___maxMotorTorque_5)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___maxSteeringAngle_6)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___breakPower_7)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___rb_8)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___steeringWheelController_9)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6937[1] = 
 {
 	static_cast<int32_t>(offsetof(CheckpointSingle_t93DDBDF63EA1FA51548C696ADF5720951116B2C3, ___trackCheckpoints_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6938[9] = 
 {
 	static_cast<int32_t>(offsetof(ContinuousMovement_tC199998B59468E83014E9E9247B1E0708E2B3D60, ___inputSource_4)),static_cast<int32_t>(offsetof(ContinuousMovement_tC199998B59468E83014E9E9247B1E0708E2B3D60, ___gravity_5)),static_cast<int32_t>(offsetof(ContinuousMovement_tC199998B59468E83014E9E9247B1E0708E2B3D60, ___speed_6)),static_cast<int32_t>(offsetof(ContinuousMovement_tC199998B59468E83014E9E9247B1E0708E2B3D60, ___additionalHeight_7)),static_cast<int32_t>(offsetof(ContinuousMovement_tC199998B59468E83014E9E9247B1E0708E2B3D60, ___inputAxis_8)),static_cast<int32_t>(offsetof(ContinuousMovement_tC199998B59468E83014E9E9247B1E0708E2B3D60, ___inputFloat_9)),static_cast<int32_t>(offsetof(ContinuousMovement_tC199998B59468E83014E9E9247B1E0708E2B3D60, ___character_10)),static_cast<int32_t>(offsetof(ContinuousMovement_tC199998B59468E83014E9E9247B1E0708E2B3D60, ___rig_11)),static_cast<int32_t>(offsetof(ContinuousMovement_tC199998B59468E83014E9E9247B1E0708E2B3D60, ___fallingSpeed_12)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6939[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6939[4] = 
 {
-	static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields, ___instance_4)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___player_5)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___currentCar_6)),};
+	static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields, ___instance_4)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___player_5)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___currentCar_6)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___maps_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6940[11] = 
 {
 	static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___showController_4)),static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___controllerCharacteristics_5)),static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___controllerPrefabs_6)),static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___handModelPrefab_7)),static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___spawnedController_8)),static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___targetDevice_9)),static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___spawnedHandModel_10)),static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___handAnimator_11)),static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___axis_12)),static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___axis2_13)),static_cast<int32_t>(offsetof(HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E, ___carController_14)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6941[13] = 
 {
 	static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___rightHand_4)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___rightHandOriginalParent_5)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___rightHandOnWheel_6)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___leftHand_7)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___leftHandOriginalParent_8)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___leftHandOnWheel_9)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___snapPositions_10)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___currentSteeringWheelRotation_11)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___directionalObject_12)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___handsFound_13)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___leftHandPresence_14)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___rightHandPresence_15)),static_cast<int32_t>(offsetof(SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888, ___carController_16)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6942[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6942[6] = 
 {
-	static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___OnCarCorrectCheckpoint_4)),static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___OnCarWrongCheckpoint_5)),static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___carTransformList_6)),static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___checkpointSingleList_7)),static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___nextCheckPointIndexList_8)),};
+	static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___OnCarCorrectCheckpoint_4)),static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___OnCarWrongCheckpoint_5)),static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___carTransformList_6)),static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___checkpointSingleList_7)),static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___nextCheckPointIndexList_8)),static_cast<int32_t>(offsetof(TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9, ___text_9)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6943[1] = 
 {
 };

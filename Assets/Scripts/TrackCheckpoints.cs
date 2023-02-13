@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,6 +14,8 @@ public class TrackCheckpoints : MonoBehaviour
     private List<CheckpointSingle> checkpointSingleList;
     private List<int> nextCheckPointIndexList;
 
+    public TextMeshProUGUI text;
+    
     private void Awake()
     {
         checkpointSingleList = new List<CheckpointSingle>();
@@ -31,6 +34,7 @@ public class TrackCheckpoints : MonoBehaviour
         {
             nextCheckPointIndexList.Add(0);
         }
+        Debug.Log(checkpointSingleList);
     }
     
     public void CarThroughCheckPoint(CheckpointSingle checkpointSingle, Transform carTransform)
@@ -41,15 +45,13 @@ public class TrackCheckpoints : MonoBehaviour
             //Correct checkpoint
             nextCheckPointIndexList[carTransformList.IndexOf(carTransform)] = (nextCheckPointIndex + 1) % checkpointSingleList.Count;
             OnCarCorrectCheckpoint?.Invoke(this, EventArgs.Empty);
-            //carTransform.TryGetComponent<CarDriverAgent>(out CarDriverAgent carDriverAgent);
-            //carDriverAgent.CorrectCheckpoint();
+            text.gameObject.SetActive(false);
         }
         else
         {
             //Wrong checkpoint
             OnCarWrongCheckpoint?.Invoke(this, EventArgs.Empty);
-            //carTransform.TryGetComponent<CarDriverAgent>(out CarDriverAgent carDriverAgent);
-            //carDriverAgent.WrongCheckpoint();
+            text.gameObject.SetActive(true);
         }
     }
 

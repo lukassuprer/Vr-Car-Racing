@@ -107,7 +107,7 @@ public class HandPresence : MonoBehaviour
         {
             carController = FindObjectOfType<CarController>();
         }
-        Debug.Log(carController);
+
         if (!targetDevice.isValid)
         {
             TryInitialize();

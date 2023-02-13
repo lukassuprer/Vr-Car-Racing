@@ -1368,6 +1368,8 @@ struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95;
 struct GameBoard_t60116B13F343499C4471611881814A5299C696D8;
 // Oculus.Platform.Samples.VrBoardGame.GameController
 struct GameController_tD5904736CDF8FE24810C9703CACB7749B207377F;
+// GameManager
+struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6;
 // UnityEngine.GameObject
 struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
 // Oculus.Platform.Samples.VrBoardGame.GamePiece
@@ -34229,6 +34231,8 @@ struct ButtonVR_tD5B857C6BE7F838BD968388CC355D331337F8ADE  : public MonoBehaviou
 	bool ___isPressed_9;
 	// HandPresence ButtonVR::handPresence
 	HandPresence_t207BDDABDEEF9B9E837275B8459E53789E17A51E* ___handPresence_10;
+	// GameManager ButtonVR::gameManager
+	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___gameManager_11;
 };
 
 // Oculus.Platform.CallbackRunner
@@ -34256,10 +34260,8 @@ struct CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5  : public MonoBeh
 	float ___breakPower_7;
 	// UnityEngine.Rigidbody CarController::rb
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___rb_8;
-	// TMPro.TextMeshProUGUI CarController::speedometer
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___speedometer_9;
 	// SteeringWheelController CarController::steeringWheelController
-	SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888* ___steeringWheelController_10;
+	SteeringWheelController_tA43A2352DF8AB539E974E09C0AB258FEE1E06888* ___steeringWheelController_9;
 };
 
 // Oculus.Interaction.Samples.CarouselView
@@ -34851,6 +34853,8 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___player_5;
 	// UnityEngine.GameObject GameManager::currentCar
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___currentCar_6;
+	// UnityEngine.GameObject[] GameManager::maps
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___maps_7;
 };
 
 struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields
@@ -37408,6 +37412,8 @@ struct TrackCheckpoints_t7F6D6AA4B990C6556B00930B1C75B6EF9F562BB9  : public Mono
 	List_1_tE21C50E4AE1E814CAF0C89E3274C165A867F4317* ___checkpointSingleList_7;
 	// System.Collections.Generic.List`1<System.Int32> TrackCheckpoints::nextCheckPointIndexList
 	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___nextCheckPointIndexList_8;
+	// TMPro.TextMeshProUGUI TrackCheckpoints::text
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___text_9;
 };
 
 // OculusSampleFramework.TrackSegment

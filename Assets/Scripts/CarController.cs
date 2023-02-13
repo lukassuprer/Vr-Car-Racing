@@ -18,7 +18,6 @@ public class CarController : MonoBehaviour
     public float maxSteeringAngle;
     public float breakPower;
     public Rigidbody rb;
-    public TextMeshProUGUI speedometer;
     public SteeringWheelController steeringWheelController;
 
     private void ApplyLocalPositionToVisuals(WheelCollider collider)
@@ -38,18 +37,17 @@ public class CarController : MonoBehaviour
         visualWheel.transform.rotation = rotation;  
     }
 
-    /*private void FixedUpdate()
+    private void FixedUpdate()
     {
-        SetInputs(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
+        /*SetInputs(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
 
-        Brake(Input.GetKey(KeyCode.Space));
-    }*/
+        Brake(Input.GetKey(KeyCode.Space));*/
+    }
 
     public void SetInputs(float forwardAmount, float turnAround)
     {
         var motor = forwardAmount * maxMotorTorque;
         rb.AddForce(transform.forward * motor);
-        speedometer.text = string.Format("motor {0:N0}\n{1:N0} mph", motor, rb.velocity.magnitude);
         var steering = turnAround * maxSteeringAngle;
 
         foreach (AxleInfo axleInfo in axleInfos)

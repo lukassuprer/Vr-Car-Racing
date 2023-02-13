@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject player;
     public GameObject currentCar;
+    public GameObject[] maps;
     
     private void Awake()
     {
