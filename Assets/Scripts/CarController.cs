@@ -88,6 +88,13 @@ public class CarController : MonoBehaviour
             }
         }
     }
+    
+    public void ResetCarRotation()
+    {
+        rb.angularVelocity = Vector3.zero;
+        rb.velocity = Vector3.zero;
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
 
     public void SetBrake(bool brake)
     {

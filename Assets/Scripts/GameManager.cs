@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject currentCar;
     public GameObject[] maps;
+    public GameObject[] cars;
     
     private void Awake()
     {
@@ -19,10 +20,5 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    
-    public void SpawnCar()
-    {
-        Instantiate(currentCar, player.transform.position, player.transform.rotation);
     }
 }

@@ -13,6 +13,8 @@ public class TrackCheckpoints : MonoBehaviour
     [SerializeField]private List<Transform> carTransformList;
     private List<CheckpointSingle> checkpointSingleList;
     private List<int> nextCheckPointIndexList;
+    
+    private CheckpointSingle previousCheckpoint;
 
     public TextMeshProUGUI text;
     
@@ -34,11 +36,11 @@ public class TrackCheckpoints : MonoBehaviour
         {
             nextCheckPointIndexList.Add(0);
         }
-        Debug.Log(checkpointSingleList);
     }
     
     public void CarThroughCheckPoint(CheckpointSingle checkpointSingle, Transform carTransform)
     {
+        if(previousCheckpoint != null) previousCheckpoint.GetComponent<Renderer>().material.color = Color.clear;
         int nextCheckPointIndex = nextCheckPointIndexList[carTransformList.IndexOf(carTransform)];
         if (checkpointSingleList.IndexOf(checkpointSingle) == nextCheckPointIndex)
         {
@@ -53,6 +55,9 @@ public class TrackCheckpoints : MonoBehaviour
             OnCarWrongCheckpoint?.Invoke(this, EventArgs.Empty);
             text.gameObject.SetActive(true);
         }
+        //Highlight next checkpoint
+        previousCheckpoint = checkpointSingleList[nextCheckPointIndexList[carTransformList.IndexOf(carTransform)]];
+        previousCheckpoint.GetComponent<Renderer>().material.color = Color.green;
     }
 
     

@@ -127,14 +127,22 @@ public class HandPresence : MonoBehaviour
             }
         }
         MoveCar();
-        if (targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool primaryButtonValue))
+        if (targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool secondaryButtonValue))
         {
             //if (!primaryButtonValue) return;
-            if (primaryButtonValue)
+            if (secondaryButtonValue)
             {
                 carController.SetInputs(0, axis2.x);
             }
-            carController.Brake(primaryButtonValue);
+            carController.Brake(secondaryButtonValue);
+        }
+
+        if (targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue))
+        {
+            if (primaryButtonValue)
+            {
+                carController.ResetCarRotation();
+            }
         }
     }
 }

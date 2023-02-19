@@ -12,13 +12,11 @@ public class ButtonVR : MonoBehaviour
     private AudioSource audioSource;
     private bool isPressed;
     private HandPresence handPresence;
-    private GameManager gameManager;
     
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         isPressed = false;
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
     
     private void OnTriggerEnter(Collider other)
@@ -54,15 +52,27 @@ public class ButtonVR : MonoBehaviour
             handPresence = GameObject.FindGameObjectWithTag("RightHand").GetComponent<HandPresence>();
             handPresence.getCarController(objectToActivate.GetComponent<CarController>());
         }
-        else
+        else if(objectToActivate.tag == "map")
         {
-            Debug.Log("map");
-            foreach (var map in gameManager.maps)
+            foreach (var map in GameManager.instance.maps)
             {
                 map.SetActive(false);
             }
 
             objectToActivate.SetActive(true);
+            
+            //Set cars position to map start
+            foreach (var car in GameManager.instance.cars)
+            {
+                foreach(Transform tr in objectToActivate.transform)
+                {
+                    if(tr.tag == "Respawn")
+                    {
+                        car.transform.position = tr.position;
+                        car.transform.rotation = tr.rotation;
+                    }
+                }
+            }
         }
     }
 }
