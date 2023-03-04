@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     public GameObject[] maps;
     public GameObject[] cars;
     
+    public int currentTimeToWin;
+    public int currentLapsToWin;
+    public Transform mapToUnlock;
+    
     private void Awake()
     {
         if (instance == null)
@@ -20,5 +24,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        maps[0].gameObject.SetActive(true);
     }
 }

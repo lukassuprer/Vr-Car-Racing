@@ -39,9 +39,9 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        /*SetInputs(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
+        SetInputs(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
 
-        Brake(Input.GetKey(KeyCode.Space));*/
+        Brake(Input.GetKey(KeyCode.Space));
     }
 
     public void SetInputs(float forwardAmount, float turnAround)
