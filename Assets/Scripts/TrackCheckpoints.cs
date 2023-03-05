@@ -128,7 +128,22 @@ public class TrackCheckpoints : MonoBehaviour
             LapFinished(carTransform);
         }
     }
-    
+
+    private void OnEnable()
+    {
+        //Restart
+        currentLap = 1;
+        numberOfCorrectCheckpoints = 0;
+        currentTime = 0f;
+        lapText.text = "Lap: " + currentLap + "/" + lapsToWin;
+        timerText.text = "0.00" + " / " + timeToWin;
+        foreach (var car in carTransformList)
+        {
+            nextCheckPointIndexList[carTransformList.IndexOf(car)] = 0;
+        }
+        raceStarted = false;
+    }
+
     private void LapFinished(Transform caTransform)
     {
         currentLap++;
