@@ -2986,6 +2986,13 @@ struct Handles_tBE5FFCB288DF15AD2AFD20ABB1F812CB008B6EA7
 	int32_t ___value___2;
 };
 
+// System.Threading.LazyThreadSafetyMode
+struct LazyThreadSafetyMode_tDE3AEB8DBBF3C991FDD672F72ACA60FA324755D1 
+{
+	// System.Int32 System.Threading.LazyThreadSafetyMode::value__
+	int32_t ___value___2;
+};
+
 // System.Threading.ManualResetEventSlim
 struct ManualResetEventSlim_tF787FECBA03E587696EC89D5AF8CB9EA24701796  : public RuntimeObject
 {
@@ -14620,6 +14627,14 @@ IL_0018:
 		return G_B3_0;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

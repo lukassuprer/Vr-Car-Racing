@@ -1,4 +1,4 @@
-using System;
+ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -19,7 +19,6 @@ public class TrackCheckpoints : MonoBehaviour
     public ParticleSystem finishParticles;
     
     private bool raceStarted = false;
-    private int numberOfCorrectCheckpoints = 0;
     private float currentTime = 0f;
     private int currentLap = 1;
     
@@ -89,7 +88,7 @@ public class TrackCheckpoints : MonoBehaviour
             //Correct checkpoint
             nextCheckPointIndexList[carTransformList.IndexOf(carTransform)] = (nextCheckPointIndex + 1) % checkpointSingleList.Count;
             text.gameObject.SetActive(false);
-            numberOfCorrectCheckpoints++;
+            carTransform.GetComponent<TrackerScript.LapTracker>().numberOfCorrectCheckpoints++;
         }
         else
         {
@@ -99,7 +98,7 @@ public class TrackCheckpoints : MonoBehaviour
         
         if(checkpointSingleList.IndexOf(checkpointSingle) == 0)
         {
-            CarThroughFirstCheckpoint();
+            CarThroughFirstCheckpoint(carTransform);
         }
         if(checkpointSingleList.IndexOf(checkpointSingle) == checkpointSingleList.Count - 1)
         {
@@ -111,9 +110,9 @@ public class TrackCheckpoints : MonoBehaviour
     }
     
     //debug log when first checkpoint is reached and last checkpoint is reached
-    private void CarThroughFirstCheckpoint()
+    private void CarThroughFirstCheckpoint(Transform carTransform)
     {
-        if (numberOfCorrectCheckpoints == 1 && currentLap <= lapsToWin)
+        if (carTransform.GetComponent<TrackerScript.LapTracker>().numberOfCorrectCheckpoints == 1 && currentLap <= lapsToWin)
         {
             raceStarted = true;
             lapText.text = "Lap: " + currentLap + "/" + lapsToWin;
@@ -122,9 +121,10 @@ public class TrackCheckpoints : MonoBehaviour
     
     private void CarThroughLastCheckpoint(Transform carTransform)
     {
-        if (numberOfCorrectCheckpoints == checkpointSingleList.Count)
+        if (carTransform.GetComponent<TrackerScript.LapTracker>().numberOfCorrectCheckpoints == checkpointSingleList.Count)
         {
             raceStarted = false;
+            carTransform.GetComponent<TrackerScript.LapTracker>().LapFinished();
             LapFinished(carTransform);
         }
     }
@@ -133,7 +133,10 @@ public class TrackCheckpoints : MonoBehaviour
     {
         //Restart
         currentLap = 1;
-        numberOfCorrectCheckpoints = 0;
+        foreach (var car in FindObjectOfType<TrackerScript>().cars)
+        {
+            car.GetComponent<TrackerScript.LapTracker>().numberOfCorrectCheckpoints = 0;
+        }
         currentTime = 0f;
         lapText.text = "Lap: " + currentLap + "/" + lapsToWin;
         timerText.text = "0.00" + " / " + timeToWin;
@@ -142,13 +145,15 @@ public class TrackCheckpoints : MonoBehaviour
             nextCheckPointIndexList[carTransformList.IndexOf(car)] = 0;
         }
         raceStarted = false;
+        GameManager.instance.currentTrackCheckpoints = this;
     }
 
-    private void LapFinished(Transform caTransform)
+    public void LapFinished(Transform carTransform)
     {
         currentLap++;
-        numberOfCorrectCheckpoints = 0;
-        ResetCheckpoint(caTransform);
+        carTransform.GetComponent<TrackerScript.LapTracker>().numberOfCorrectCheckpoints = 0;
+        ResetCheckpoint(carTransform);
+        carTransform.GetComponent<TrackerScript.LapTracker>().lapFinished = true;
     }
 
     public void ResetCheckpoint(Transform carTransform)

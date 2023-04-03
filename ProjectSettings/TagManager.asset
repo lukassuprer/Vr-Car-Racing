@@ -15,6 +15,7 @@ TagManager:
   - xrManager
   - PlayerPos
   - map
+  - ghost
   layers:
   - Default
   - TransparentFX

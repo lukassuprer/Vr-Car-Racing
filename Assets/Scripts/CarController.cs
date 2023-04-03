@@ -18,7 +18,6 @@ public class CarController : MonoBehaviour
     public float maxSteeringAngle;
     public float breakPower;
     public Rigidbody rb;
-    public SteeringWheelController steeringWheelController;
 
     private void ApplyLocalPositionToVisuals(WheelCollider collider)
     {
@@ -37,12 +36,12 @@ public class CarController : MonoBehaviour
         visualWheel.transform.rotation = rotation;  
     }
 
-    /*private void FixedUpdate()
+    private void FixedUpdate()
     {
         SetInputs(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
 
         Brake(Input.GetKey(KeyCode.Space));
-    }*/
+    }
 
     public void SetInputs(float forwardAmount, float turnAround)
     {
@@ -56,7 +55,6 @@ public class CarController : MonoBehaviour
             {
                 axleInfo.leftWheel.steerAngle = steering;
                 axleInfo.rightWheel.steerAngle = steering;
-                steeringWheelController.currentSteeringWheelRotation = steering;
             }
 
             if (axleInfo.motor)
@@ -121,5 +119,10 @@ public class CarController : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.drag = 1000;
         rb.drag = 0;
+    }
+    
+    public float GetSpeed()
+    {
+        return rb.velocity.magnitude;
     }
 }

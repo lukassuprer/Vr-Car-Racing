@@ -12,6 +12,7 @@ public class ButtonVR : MonoBehaviour
     private AudioSource audioSource;
     private bool isPressed;
     private HandPresence handPresence;
+    public Ghost ghost;
     
     private void Start()
     {
@@ -51,6 +52,7 @@ public class ButtonVR : MonoBehaviour
             handPresence.getCarController(objectToActivate.GetComponent<CarController>());
             handPresence = GameObject.FindGameObjectWithTag("RightHand").GetComponent<HandPresence>();
             handPresence.getCarController(objectToActivate.GetComponent<CarController>());
+            GameManager.instance.GetActiveCars();
         }
         else if(objectToActivate.tag == "map")
         {
@@ -72,6 +74,23 @@ public class ButtonVR : MonoBehaviour
                         car.transform.rotation = tr.rotation;
                     }
                 }
+            }
+        }
+        else if (objectToActivate.tag == "ghost")
+        {
+            objectToActivate.SetActive(true);
+            Debug.Log(ghost.isRecording);
+            if(ghost.isReplay)
+            {
+                Debug.Log("hsajhajs");
+                ghost.ResetData();
+                ghost.isReplay = false;
+                ghost.isRecording = true;
+            }
+            else if(ghost.isRecording)
+            {
+                ghost.isRecording = false;
+                ghost.isReplay = true;
             }
         }
     }
